@@ -1,21 +1,14 @@
 
 import { GlobeJSX } from "@/components/custom/Globe";
 import { HeroParallaxJSX } from "@/components/custom/HeroParallax";
-import Comparison from "@/components/pagesComponents/Comparision";
 import Hero from "@/components/pagesComponents/Hero";
-import Stats from "@/components/pagesComponents/Stats";
-import { Suspense } from "react";
 
 const page = () => {
   return (
-    <div className="bg-[#1C1C1C] w-screen">
-      <Suspense fallback={<h1 className="text-white">loding...</h1>}>
+    <div className="bg-[#1C1C1C] w-screen overflow-x-hidden">
         <Hero />
         <HeroParallaxJSX />
-        <Comparison/>
-        <Stats/>
-        <GlobeJSX />
-      </Suspense>
+        {/* <GlobeJSX /> */}
     </div>
   );
 };

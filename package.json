@@ -13,6 +13,7 @@
     "@react-three/drei": "^9.107.0",
     "@react-three/fiber": "^8.16.8",
     "@tabler/icons-react": "^3.6.0",
+    "axios": "^1.7.2",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.10",
     "next": "14.2.4",
@@ -20,7 +21,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hot-toast": "^2.4.1",
-    "recharts": "^2.12.7",
+    "socket.io-client": "^4.7.5",
     "tailwind-merge": "^2.3.0",
     "three": "^0.165.0",
     "three-globe": "^2.31.0"

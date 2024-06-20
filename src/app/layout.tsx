@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { FloatingNavJSX } from "@/components/custom/Nav";
 import NextTopLoader from "nextjs-toploader";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "swiftDeploye",
@@ -17,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-[#1C1C1C] w-screen">
+        <Toaster />
         <NextTopLoader color="#fff" />
         <FloatingNavJSX />
         {children}
