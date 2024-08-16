@@ -103,7 +103,7 @@ const Hero = () => {
           viewport={{ once: true }}
           className="absolute xs:bottom-10 bottom-10 w-full flex justify-center items-center"
         >
-          <a href="#">
+          <a href="#deployed-sites">
             <div className="w-[35px] h-[64px] rounded-3xl border-4 border-white flex justify-center items-start p-2">
               <motion.div
                 animate={{

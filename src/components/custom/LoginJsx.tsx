@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { login } from "@/apiFunctions/users/login";
+import { motion } from "framer-motion";
 
 export function LoginJsx() {
   // states
@@ -22,7 +23,7 @@ export function LoginJsx() {
   // useEffects
   useEffect(() => {
     if (!error) return;
-    toast(error);
+    toast.error(error);
     setError("");
   }, [error]);
 

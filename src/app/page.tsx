@@ -1,14 +1,16 @@
-
 import { GlobeJSX } from "@/components/custom/Globe";
 import { HeroParallaxJSX } from "@/components/custom/HeroParallax";
+import { FloatingNavJSX } from "@/components/custom/Nav";
 import Hero from "@/components/pagesComponents/Hero";
 
 const page = () => {
   return (
     <div className="bg-[#1C1C1C] w-screen overflow-x-hidden">
-        <Hero />
+      <Hero />
+      <div id="deployed-sites">
         <HeroParallaxJSX />
-        {/* <GlobeJSX /> */}
+      </div>
+      <GlobeJSX />
     </div>
   );
 };

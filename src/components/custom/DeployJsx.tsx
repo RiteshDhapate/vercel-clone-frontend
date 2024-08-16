@@ -93,6 +93,8 @@ export function DeployJsx() {
            shadow-[0px_0px_1px_1px_var(--neutral-700)]
            group-hover/input:shadow-none transition duration-400"
           >
+
+            <option value="">select project type</option>
             <option value="build">React</option>
             <option value="dist">Vite</option>
             <option value="normal">HTML CSS JS</option>

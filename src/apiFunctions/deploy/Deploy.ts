@@ -35,7 +35,7 @@ export async function deploy(pramitersData: pramiters) {
       return;
     }
     if (!buildFolder) {
-      setError("Invalid project type");
+      setError("Invalid project type client");
       return;
     }
 
@@ -48,7 +48,7 @@ export async function deploy(pramitersData: pramiters) {
 
     // set loding true
     setLoding(true);
-    toastId = toast.loading("verifying otp");
+    toastId = toast.loading("verifying");
 
     // api call
     const { data } = await axios.post(

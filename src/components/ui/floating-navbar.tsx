@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import {
   motion,
@@ -23,6 +24,8 @@ export const FloatingNav = ({
   const { scrollYProgress } = useScroll();
 
   const [visible, setVisible] = useState(false);
+
+  const token = localStorage.getItem('token') || "";
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
@@ -65,17 +68,22 @@ export const FloatingNav = ({
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              "relative text-neutral-50 items-center flex space-x-1 60 hover:text-neutral-300 "
+              "relative px-1 py-2 text-neutral-50 items-center flex space-x-1 60 hover:text-neutral-300 "
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
             <span className="hidden sm:block text-sm">{navItem.name}</span>
           </Link>
         ))}
-        <Link  href="/login" className="border text-sm font-medium relative border-white/[0.2] text-white px-4 py-2 rounded-full">
-          <span>Login</span>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
-        </Link>
+        {!token && (
+          <Link
+            href="/login"
+            className="border text-sm font-medium relative border-white/[0.2] text-white px-4 py-2 rounded-full"
+          >
+            <span>Login</span>
+            <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
+          </Link>
+        )}
       </motion.div>
     </AnimatePresence>
   );
