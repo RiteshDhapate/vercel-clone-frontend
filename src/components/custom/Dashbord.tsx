@@ -107,10 +107,32 @@ const Dashbord = () => {
       {loding && <SkeletonJsx />}
       {!loding && (
         <div className="w-full flex flex-wrap justify-center">
+          {projects.length === 0 && (
+            <motion.h3
+              initial={{
+                y: 120,
+                opacity: 0.1,
+                scale: 0,
+              }}
+              transition={{
+                duration: 0.2,
+                ease: "easeOut",
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+                scale: 1,
+              }}
+              viewport={{ once: true }}
+              className="mt-3 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-slate-300  to-green-500"
+            >
+              No any project. click on deploy project.
+            </motion.h3>
+          )}
           {projects.map((item, index) => (
             <motion.a
               initial={{
-                scale:0.8,
+                scale: 0.8,
                 opacity: 0.1,
               }}
               transition={{
@@ -118,7 +140,7 @@ const Dashbord = () => {
                 ease: "easeOut",
               }}
               whileInView={{
-                scale:1,
+                scale: 1,
                 opacity: 1,
               }}
               viewport={{ once: true }}

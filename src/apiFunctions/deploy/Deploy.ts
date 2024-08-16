@@ -74,6 +74,7 @@ export async function deploy(pramitersData: pramiters) {
     pramitersData.setLoding(false);
     // @ts-ignore
     const errorMessage = error?.response?.data?.error;
+    console.log("Internal error , please try again.");
     pramitersData.setError(`${errorMessage}`);
   }
 }
