@@ -41,7 +41,6 @@ export async function login(pramitersData: pramiters) {
       }
     );
 
-      console.log(data);
       
       if (data?.isVerified === false) {
           route.push(`/verification/${data.id}`);
@@ -57,7 +56,6 @@ export async function login(pramitersData: pramiters) {
     toast.success("login successful");
     route.push("/dashbord");
   } catch (error) {
-    console.log(error);
     pramitersData.toast.dismiss(toastId);
     pramitersData.setLoding(false);
     // @ts-ignore

@@ -62,19 +62,15 @@ export async function deploy(pramitersData: pramiters) {
     );
 
       setIsProjectDeploying(true);
-      console.log(data.projectSlug);
     setSocketSlug(data.projectSlug);
-    console.log(data);
     setLoding(false);
     toast.dismiss(toastId);
     toast.success("project deplloying...");
   } catch (error) {
-    console.log(error);
     pramitersData.toast.dismiss(toastId);
     pramitersData.setLoding(false);
     // @ts-ignore
     const errorMessage = error?.response?.data?.error;
-    console.log("Internal error , please try again.");
     pramitersData.setError(`${errorMessage}`);
   }
 }

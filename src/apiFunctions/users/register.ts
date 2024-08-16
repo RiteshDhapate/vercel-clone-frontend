@@ -60,7 +60,6 @@ export async function handleRegister(pramitersData: pramiters) {
     toastId = toast.loading("Creating user...");
 
 
-    console.log("api call");
     // api call
     const { data } = await axios.post(
       `${process.env.NEXT_PUBLIC_SERVER_URL}/v1/user/register`,

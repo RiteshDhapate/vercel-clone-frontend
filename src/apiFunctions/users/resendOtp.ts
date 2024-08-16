@@ -33,7 +33,6 @@ export async function resendOtp(pramitersData: pramiters) {
     toast.dismiss(toastId);
     toast.success("otp sent successfully");
   } catch (error) {
-    console.log(error);
     pramitersData.toast.dismiss(toastId);
     pramitersData.setResendOtpLoding(false);
     // @ts-ignore

@@ -22,8 +22,13 @@ const Dashbord = () => {
   const [loding, setLoding] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
   const [projects, setProjects] = useState<projects[]>([]);
-
-  const token = typeof window !== "undefined" ? localStorage.getItem("token") || "" : "";
+  const [token, setToken] = useState<string>("");
+  
+  useEffect(() => { 
+    const tokenData = window.localStorage.getItem("token") || "";
+    setToken(tokenData);
+  },[])
+  
 
   const route = useRouter();
   // projects;

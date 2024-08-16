@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   motion,
   AnimatePresence,
@@ -25,7 +25,12 @@ export const FloatingNav = ({
 
   const [visible, setVisible] = useState(false);
 
-  const token = localStorage.getItem('token') || "";
+  const [token, setToken] = useState<string>("");
+
+  useEffect(() => {
+    const tokenData = window.localStorage.getItem("token") || "";
+    setToken(tokenData);
+  }, []);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number

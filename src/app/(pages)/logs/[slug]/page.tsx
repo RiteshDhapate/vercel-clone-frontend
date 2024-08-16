@@ -28,7 +28,6 @@ const page = () => {
   // functions
   // socket handlers
   const handleSocketIncommingMessage = useCallback((message: string) => {
-    console.log(`[Incomming Socket Message]:`, typeof message, message);
     const { log } = JSON.parse(message);
     setLogs((prev) => [...prev, log]);
     logContainerRef.current?.scrollIntoView({ behavior: "smooth" });

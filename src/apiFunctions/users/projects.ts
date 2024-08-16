@@ -45,7 +45,6 @@ export async function projectsHandler(pramitersData: pramiters) {
     setProjects(data.projects);
     setLoding(false);
   } catch (error) {
-    console.log(error);
     pramitersData.setLoding(false);
     // @ts-ignore
     const errorMessage = error?.response?.data?.error;

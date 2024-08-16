@@ -48,7 +48,6 @@ export async function verificationHandler(pramitersData: pramiters) {
     toast.success("successfully verified");
     route.push("/dashbord");
   } catch (error) {
-    console.log(error);
     pramitersData.toast.dismiss(toastId);
     pramitersData.setVerificationLoding(false);
     // @ts-ignore
