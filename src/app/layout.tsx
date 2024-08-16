@@ -56,7 +56,9 @@ export default function RootLayout({
       <body className="bg-[#1C1C1C] w-screen">
         <SocketProvider>
           <Toaster />
-          <NextTopLoader color="#fff" />
+          <NextTopLoader color="pink"
+          height={5}
+          />
           <FloatingNavJSX />
           {children}
         </SocketProvider>
