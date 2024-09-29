@@ -79,7 +79,7 @@ const page = () => {
         <a
           target="_blank"
           className=" bg-sky-950 px-3 py-2 rounded-lg text-white"
-          href={`https://vercel-clone-s3-ritesh.s3.ap-south-1.amazonaws.com/__outputs/${slug}/index.html`}
+          href={`https://s3.ap-southeast-2.amazonaws.com/site.ritesh.live/__outputs/${slug}/index.html`}
         >
           {`https://${slug}`}
         </a>
